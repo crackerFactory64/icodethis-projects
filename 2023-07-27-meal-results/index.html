@@ -6,5 +6,91 @@
     <title>Meal Results</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="results">
+      <div class="container">
+        <header class="results__header">
+          <h1>Results for "Avocado"</h1>
+          <p class="grey-text small-text">3 results found</p>
+          <div class="header__display-toggle">
+            <span class="grey-text small-text">Choose display</span>
+            <button
+              aria-label="list view"
+              class="display__list-button"
+            ></button>
+            <button
+              aria-label="grid view"
+              class="display__grid-button"
+              data-selected
+            ></button>
+          </div>
+          <div class="header__filters">
+            <button>
+              Filters
+              <span class="round-background">3</span>
+            </button>
+            <div class="filters__filter">
+              <span>Vegetarian</span>
+              <button
+                aria-label="delete filter"
+                class="filter__delete-button"
+              ></button>
+            </div>
+            <div class="filters__filter">
+              <span>Protein</span>
+              <button
+                aria-label="delete filter"
+                class="filter__delete-button"
+              ></button>
+            </div>
+            <div class="filters__filter">
+              <span>Dinner</span>
+              <button
+                aria-label="delete filter"
+                class="filter__delete-button"
+              ></button>
+            </div>
+          </div>
+        </header>
+        <section class="results__recipes">
+          <div class="recipes__recipe">
+            <img
+              alt=""
+              class="recipe__image"
+              src="https://images.unsplash.com/photo-1613769049987-b31b641f25b1"
+            />
+            <div class="recipe__content">
+              <h2><a href="#">Avocado sandwich with boiled egg</a></h2>
+              <p class="recipe__time small-text">Under 1 hour</p>
+            </div>
+            <button aria-label="bookmark recipe"></button>
+          </div>
+          <div class="recipes__recipe">
+            <img
+              alt=""
+              class="recipe__image"
+              src="https://images.unsplash.com/photo-1542814880-7e62cf14b7c8"
+            />
+            <div class="recipe__content">
+              <h2><a href="#">Fresh avocado salad with broccoli</a></h2>
+              <p class="recipe__time small-text">Under 1 hour</p>
+            </div>
+            <button aria-label="bookmark recipe"></button>
+          </div>
+          <div class="recipes__recipe">
+            <img
+              alt=""
+              class="recipe__image"
+              src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85"
+            />
+            <div class="recipe__content">
+              <h2><a href="#">Avocado and spinach pesto spaghetti</a></h2>
+              <p class="recipe__time small-text">Under 1 hour</p>
+            </div>
+            <button aria-label="bookmark recipe"></button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
