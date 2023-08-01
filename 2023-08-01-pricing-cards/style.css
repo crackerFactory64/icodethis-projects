@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap");
+
+:root {
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(228, 71%, 99%);
+  --color-neutral-400: hsl(250, 8%, 71%);
+
+  --color-primary-300: hsl(228, 100%, 88%);
+  --color-primary-400: hsl(351, 100%, 85%);
+  --color-primary-500: hsl(37, 100%, 73%);
+  --color-primary-600: hsl(267, 100%, 74%);
+  --color-primary-800: hsl(243, 33%, 22%);
+
+  --font-color: var(--color-primary-800);
+  --font-family: "Roboto", sans-serif;
+  --font-size: 12px;
+  --font-weight-body: 400;
+  --font-weight-heading: 500;
+  --font-weight-thick: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-primary-800);
+  color: var(--color-primary-800);
+  display: grid;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-body);
+  min-height: 100dvh;
+  place-content: center;
+}
+
+.cards {
+  background-color: var(--color-neutral-200);
+  border-radius: 1em;
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: column;
+  padding: 4em;
+}
+
+h1 {
+  position: absolute;
+  left: -1000em;
+  visibility: hidden;
+}
+
+.cards__card {
+  background-color: var(--color-neutral-100);
+  box-shadow: 0 1em 1em -1em var(--shadow-color);
+  border-radius: 0.5em;
+  box-shadow: ;
+  text-align: center;
+  padding: 0.5em 0.5em 2em 0.5em;
+}
+
+.card--free {
+  --shadow-color: var(--color-neutral-400);
+}
+
+.card--lite {
+  --shadow-color: var(--color-primary-600);
+}
+
+.card--pro {
+  --shadow-color: var(--color-primary-500);
+}
+
+.card__header {
+  border-radius: 0.25em;
+  color: var(--color-neutral-100);
+  padding: 1em;
+}
+
+.card--free > .card__header {
+  background-color: var(--color-neutral-200);
+  color: var(--color-primary-800);
+}
+
+.card--lite > .card__header {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-300),
+    var(--color-primary-600)
+  );
+}
+
+.card--pro > .card__header {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-400),
+    var(--color-primary-500)
+  );
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-heading);
+  text-transform: uppercase;
+}
+
+.card__content {
+  padding-inline: 1em;
+}
+
+.card__price {
+  margin-block-start: 1em;
+  font-size: 3rem;
+  font-weight: var(--font-weight-thick);
+  position: relative;
+}
+
+.card__price::before {
+  aspect-ratio: 1;
+  content: "$";
+  font-size: 1rem;
+  position: absolute;
+  transform: translateX(-1em);
+}
+
+.card--lite .card__price::after,
+.card--pro .card__price::after {
+  aspect-ratio: 1;
+  content: " /mo";
+  font-size: 1rem;
+  width: 1em;
+}
+
+.card__tagline {
+  font-weight: var(--font-weight-heading);
+  text-transform: uppercase;
+}
+
+.card__description {
+  margin-block-start: 1em;
+  margin-inline: auto;
+  max-width: 25ch;
+}
+
+.card__link {
+  border: 2px solid var(--color-neutral-400);
+  border-radius: 0.25em;
+  color: inherit;
+  display: block;
+  font-weight: var(--font-weight-heading);
+  margin-block-start: 2em;
+  padding: 0.75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.card__points {
+  display: grid;
+  gap: 1em;
+  list-style: none;
+  margin-block-start: 2em;
+  padding: 0;
+  text-align: start;
+}
+
+.card__points > li {
+  display: flex;
+  gap: 0.5em;
+}
+
+.card__points > li::before {
+  aspect-ratio: 1;
+  background-image: url(https://svgshare.com/i/w1w.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1em;
+  content: "";
+  display: block;
+  width: 1em;
+}
+
+.card__points > li[data-included="false"]::before {
+  background-image: url(https://svgshare.com/i/w3V.svg);
+  background-size: contain;
+}
+
+@media (width < 62.5em) {
+  .cards {
+    grid-auto-flow: row;
+  }
+}
