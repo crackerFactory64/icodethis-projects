@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Download Status</h1>
-      <button aria-label="toggle download status">
+      <button
+        aria-label="toggle download status"
+        class="main__button"
+        id="toggle-downloads"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1em"
@@ -22,7 +26,7 @@
           />
         </svg>
       </button>
-      <section class="downloads">
+      <section class="downloads" id="downloads">
         <div class="downloads__storage">
           <h2>Cloud storage</h2>
           <div class="storage__bar">
@@ -98,11 +102,23 @@
           </div>
           <div class="process__content">
             <h2>Updating Solutions</h2>
-            <p>Updating Solutions</p>
+            <p>Waiting...</p>
           </div>
         </div>
         <a href="#">Go to downloads</a>
       </section>
     </main>
+
+    <script>
+      const downloads = document.getElementById("downloads");
+      let isHidden = false;
+
+      document
+        .getElementById("toggle-downloads")
+        .addEventListener("click", () => {
+          isHidden = !isHidden;
+          downloads.setAttribute("hidden", isHidden);
+        });
+    </script>
   </body>
 </html>
