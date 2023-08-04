@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(213, 100%, 98%);
+  --color-neutral-300: hsl(222, 87%, 94%);
+  --color-neutral-400: hsl(216, 82%, 93%);
+  --color-neutral-500: hsl(227, 37%, 74%);
+  --color-neutral-700: hsl(235, 10%, 56%);
+  --color-neutral-800: hsl(251, 7%, 33%);
+  --color-neutral-900: hsl(243, 31%, 12%);
+
+  --font-color: var(--color-neutral-800);
+  --font-family: "Poppins", sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+body {
+  background-color: var(--color-neutral-200);
+  color: var(--font-color);
+  display: grid;
+  font-family: var(--font-family);
+  min-height: 100dvh;
+  place-content: center;
+}
