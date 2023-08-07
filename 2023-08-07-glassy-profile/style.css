@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 :root {
   --color-neutral-100: hsl(0, 0%, 100%);
   --color-neutral-300: hsl(233, 28%, 83%);
@@ -43,6 +43,99 @@ body {
   display: grid;
   font-family: var(--font-family);
   font-weight: var(--font-weight-body);
-  place-content: center;
   min-height: 100dvh;
+  place-content: center;
+}
+
+.card {
+  background-color: var(--color-primary-800);
+  border-radius: 1em;
+  height: 32em;
+  padding-block: 2em;
+  position: relative;
+  width: 18em;
+}
+
+.card__profile {
+  background-color: var(--color-neutral-100);
+  border-radius: 1.5em;
+  left: -2.5em;
+  overflow: hidden;
+  padding: 3em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23em;
+}
+
+.card__profile::before,
+.card__profile::after {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: block;
+  content: "";
+  filter: blur(3em);
+  position: absolute;
+  z-index: -1;
+}
+
+.card__profile::before {
+  background-color: var(--color-primary-600);
+  right: 0;
+  width: 12em;
+}
+
+.card__profile::after {
+  background-color: var(--color-primary-400);
+  bottom: -40%;
+  left: -25%;
+  width: 20em;
+}
+
+.profile__menu-button {
+  aspect-ratio: 1;
+  background-color: transparent;
+  display: block;
+  margin-inline-start: auto;
+  width: 2em;
+}
+
+.profile__image {
+  aspect-ratio: 1;
+  border: 0.5em solid var(--color-neutral-100);
+  border-radius: 50%;
+  margin-inline: auto;
+  width: 7.5em;
+}
+
+.profile__name {
+  font-size: 1.33rem;
+  margin-block-start: 1.25em;
+}
+
+.profile__location {
+  align-items: center;
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  margin-block-start: 0.5em;
+}
+
+.profile__location::before {
+  aspect-ratio: 1;
+  background-image: url(https://svgshare.com/i/wFG.svg);
+  background-repeat: no-repeat;
+  content: "";
+  width: 1.5em;
+}
+
+.profile__link {
+  background-color: var(--color-primary-800);
+  border-radius: 1000em;
+  color: var(--color-neutral-100);
+  display: inline-block;
+  font-weight: 300;
+  margin-block-start: 2em;
+  padding: 0.33em 1em;
 }
