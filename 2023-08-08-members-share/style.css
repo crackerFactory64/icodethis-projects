@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+:root {
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-500: hsl(236, 14%, 42%);
+  --color-neutral-700: hsl(236, 24%, 25%);
+  --color-neutral-800: hsl(236, 29%, 20%);
+
+  --font-color: var(--color-neutral-100);
+  --font-family: "Open Sans", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.visually-hidden {
+  top: -1000vh;
+  position: absolute;
+  visibility: hidden;
+}
