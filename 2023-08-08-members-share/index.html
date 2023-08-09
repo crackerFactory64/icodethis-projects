@@ -6,5 +6,45 @@
     <title>Members Share</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1 class="visually-hidden">Member Share</h1>
+      <section class="share">
+        <div class="share__top">
+          <button aria-label="go back" class="header__back"></button>
+          <button class="header__settings">Settings</button>
+        </div>
+        <div class="share__middle">
+          <h2 class="content__title">Share with people and groups</h2>
+          <div class="content__people">
+            <div class="people__person">
+              <img
+                src="https://i.pravatar.cc/150?img=45"
+                alt=""
+                class="person__image"
+              />
+              <p class="person__name">Emma James</p>
+            </div>
+            <div class="people__person">
+              <img
+                src="https://i.pravatar.cc/150?img=18"
+                alt=""
+                class="person__image"
+              />
+              <p class="person__name">Jim Fanges</p>
+            </div>
+            <label for="notify">
+              <input type="checkbox" name="notify" id="notify" />
+              Notify people
+            </label>
+          </div>
+        </div>
+        <div class="share__bottom">
+          <button class="bottom__feedback">Send feedback</button>
+          <button class="bottom__cancel">Cancel</button>
+          <button class="bottom__send">Send</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
