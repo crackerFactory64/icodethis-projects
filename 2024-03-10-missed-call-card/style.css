@@ -1,0 +1,100 @@
+img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+}
+
+button,
+p,
+h1 {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3em 2em 1fr 2em 3em;
+  margin-inline: auto;
+  max-width: 30em;
+}
+
+body {
+  background-color: hsl(224, 41%, 95%);
+  display: grid;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  min-height: 100dvh;
+  place-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1em;
+  box-shadow: 0 0 2em hsl(237, 44%, 90%);
+  padding-block: 2em;
+}
+
+.card__header,
+.card__content {
+  grid-template-columns: subgrid;
+}
+
+.card__header {
+  align-items: center;
+  display: flex;
+  grid-column: 2 / -2;
+  justify-content: space-between;
+
+  & button {
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 50%;
+    color: hsl(238, 18%, 71%);
+    font-size: 1.5rem;
+    height: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.card__content {
+  grid-column: 3;
+}
+
+.card__information {
+  display: grid;
+  font-weight: 500;
+  gap: 1em;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  margin-block: 3em;
+
+  & small {
+    font-weight: 600;
+    margin-block-start: 1em;
+  }
+}
+
+.card__img {
+  border: 0.5em solid hsl(224, 41%, 95%);
+  border-radius: 50%;
+  max-width: 6.66em;
+}
+
+.card__buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.card__button {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  width: 100%;
+}
+
+.card__button--call {
+  border-color: transparent;
+  background-color: green;
+  color: #fff;
+}
